@@ -19,7 +19,7 @@ class ListCategoryView(generics.ListAPIView):
     http_method_names = ['get']
     filter_backends = (filters.DjangoFilterBackend, OrderingFilter, SearchFilter)
     ordering_fields = ['title', 'price']
-    search_fields = ['title', 'price', 'category']
+    search_fields = ['title', 'price', 'category__title']
     
 
 class RetrieveCategoryView(generics.RetrieveAPIView):
